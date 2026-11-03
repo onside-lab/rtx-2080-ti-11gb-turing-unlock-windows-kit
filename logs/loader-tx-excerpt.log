@@ -1,0 +1,25 @@
+2: [INFO ] loader::logging: nv-uefi-unloader v2.1.6 (M0 skeleton: read-only)
+5: [INFO ] loader::banner:  nv-uefi-unlocker v2.1.6 (built Sat 2026-10-31 05:27:14 +09:00)
+19: [INFO ] loader::banner: PHASE: CONFIRM
+20: [INFO ] loader: CONFIRM: no armed marker - Space/Enter/30s confirm semantics
+21: [INFO ] loader::keywait: CONFIRM: Enter pressed, proceeding
+101: [INFO ] loader::sample: SAMPLE TU10x FEAT_PLM 0x409650 = 0xffffff8f [ok]
+102: [INFO ] loader::sample: SAMPLE TU10x FEAT_SS0 0x409664 = 0x00002100 [ok]
+249: [INFO ] loader::tx_fwsec: FWSEC-TU10X: *** WPR2 UP lo=0x2bfe000 hi=0x2bfee00 after 3ms ***
+251: [INFO ] loader::tx: TX: fwsec ok (WPR2 verified)
+290: [INFO ] loader::tx_booter: BOOTER-DIRECT: mid-run sampler verdict: dma_landed=false sanitized_only=true
+291: [INFO ] loader::tx_booter: BOOTER-DIRECT: halted, mailbox0=0x0 mailbox1=0x1 exci=0x00900100
+299: [INFO ] loader::tx_booter: BOOTER-DIRECT: DMEM verdict: signature DMA never landed - the booter rejected the meta/staging before the exploit point
+300: [INFO ] loader::tx_booter: BOOTER-DIRECT: verdict deferred to POST-BOOT (mailbox0 may be input carrier or status code)
+302: [INFO ] loader::tx_booter: POST-BOOT: FEAT_PLM=0xffffffff SS0=0x2100 SS1=0x7 (Turing 0x4096xx block)
+303: [INFO ] loader::tx_booter: POST-BOOT: FACTORY FEAT_READOUT_1=0xbadf5040 (0 = full speed; badf5040 = PLM still closed)
+304: [INFO ] loader::tx_booter: POST-BOOT: SEC2 MAILBOX0=0x00000000 WPR2_HI=0x0
+306: [INFO ] loader::tx_booter: selector read: SS0=0x2100 expected_unlock=0x88888888
+307: [INFO ] loader::tx_booter: selector write: SS0=0x88888888
+308: [INFO ] loader::tx_booter: selector read: SS1=0x7 expected_unlock=0x8
+309: [INFO ] loader::tx_booter: selector write: SS1=0x8
+310: [INFO ] loader::tx: SELECTOR RESULT: SS0=0x88888888 SS1=0x8
+364: [INFO ] loader::tx: TU10X PLM relock: plm=0xffffffef known-good (bits 5:6 sticky-open) SS0=0x88888888 SS1=0x00000008 unlock_persist=true
+377: [INFO ] loader::tx: FINAL: transaction complete, all DMA released
+378: [INFO ] loader: SELECTOR RESULT: transaction complete
+379: [INFO ] loader::tx: HANDOFF-OUT: ss0=0xbadf5040 ss1=0xbadf5040 readout1=0xbadf5040 feat_plm=0xbadf5040 wpr2_hi=0x0 pmcsr=0x0008 dstate=D0 | tu10x: plm=0xffffffef ss0=0x88888888 ss1=0x00000008 | tu10x_unlock=true ss0_unlock=false ss1_unlock=false plm_open=false

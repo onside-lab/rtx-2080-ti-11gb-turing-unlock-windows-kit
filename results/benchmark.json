@@ -1,0 +1,101 @@
+{
+  "size": 2048,
+  "samples": 5,
+  "iterations_per_sample": 20,
+  "warmup_iterations": 10,
+  "torch_version": "2.5.1+cu121",
+  "tf32_allowed": false,
+  "fp16_reduced_precision_reduction": false,
+  "kernel_accumulation_mode_independently_instrumented": false,
+  "measurements": [
+    {
+      "state": "before_unlock",
+      "power_limit_w": 192.5,
+      "sm_clock_mhz": 1590.0,
+      "sm_clock_summary": "median of recorded telemetry samples; not a fixed clock",
+      "sm_clock_observed_range_mhz": [
+        1350.0,
+        1590.0
+      ],
+      "results": [
+        {
+          "workload": "FP16-input-GEMM",
+          "median_tflops": 46.88030558569446,
+          "numerical_check": {
+            "shape": [
+              64,
+              64,
+              64
+            ],
+            "reference": "CPU-float64",
+            "passed": true,
+            "rtol": 0.005,
+            "atol": 0.01
+          }
+        },
+        {
+          "workload": "FP32-SIMT-control",
+          "median_tflops": 12.60781282835962,
+          "numerical_check": {
+            "shape": [
+              64,
+              64,
+              64
+            ],
+            "reference": "CPU-float64",
+            "passed": true,
+            "rtol": 0.0001,
+            "atol": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "state": "after_unlock",
+      "power_limit_w": 192.5,
+      "sm_clock_mhz": 1575.0,
+      "sm_clock_summary": "median of recorded telemetry samples; not a fixed clock",
+      "sm_clock_observed_range_mhz": [
+        1575.0,
+        1635.0
+      ],
+      "results": [
+        {
+          "workload": "FP16-input-GEMM",
+          "median_tflops": 87.17134954661817,
+          "numerical_check": {
+            "shape": [
+              64,
+              64,
+              64
+            ],
+            "reference": "CPU-float64",
+            "passed": true,
+            "rtol": 0.005,
+            "atol": 0.01
+          }
+        },
+        {
+          "workload": "FP32-SIMT-control",
+          "median_tflops": 12.26543387926174,
+          "numerical_check": {
+            "shape": [
+              64,
+              64,
+              64
+            ],
+            "reference": "CPU-float64",
+            "passed": true,
+            "rtol": 0.0001,
+            "atol": 0.0001
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "One card; one unlock run; one benchmark session per state",
+    "Separate 64x64 checks do not validate all elements of the timed products",
+    "No application or endurance measurement"
+  ]
+}
