@@ -1,0 +1,37 @@
+title: "[Results] GPU model and method"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share results from your RTX 20 card, including unsuccessful or unchanged results.
+        This is a place to compare evidence, with no individual support.
+        Do not include serial numbers, GPU UUIDs, PnP instance IDs, Volume GUIDs,
+        recovery keys, or unredacted local reports.
+  - type: textarea
+    id: configuration
+    attributes:
+      label: GPU and Windows configuration
+      description: GPU model, subsystem vendor/device ID, VBIOS, Windows version, NVIDIA driver, and GSP on/off (firmware version if known). No serials or UUIDs.
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream version
+      description: Exact nv-uefi-unlocker release and commit used; distinguish it from the Windows kit version.
+    validations:
+      required: true
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Before and after numbers
+      description: Include units, FP16-input and FP32 results if available, numerical checks, failures, and the number of boots/runs. State unknowns.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and limits
+      description: Benchmark/script, matrix size or app workload, software versions, warmups, iterations, samples, power limit, clocks, and settings held constant. Separate short GEMM results from app/endurance results.
+    validations:
+      required: true

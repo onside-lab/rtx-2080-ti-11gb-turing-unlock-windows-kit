@@ -1,0 +1,69 @@
+{
+  "identity_sha256": "",
+  "binding_sha256": "",
+  "volume_guid_path": "",
+  "inspect_report": "",
+  "inspect_sha256": "",
+  "payload_files": [
+    {
+      "path": "EFI/BOOT/BOOTX64.EFI",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "booter_load_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "chain-target.txt",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "fwimage_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "fwsignature_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "gsp_boot_desc_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "gsp_boot_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "no-reconnect.txt",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "sec2_bl_tu10x.bin",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "tx-require-d0.txt",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "tx-select-bdf.txt",
+      "bytes": null,
+      "sha256": ""
+    },
+    {
+      "path": "v67-tu10x-four-plm.bin",
+      "bytes": null,
+      "sha256": ""
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Driver Version                                         : 610.88 [Deprecated; will be removed in CUDA 14.0. Use KMD Version instead]
+Attached GPUs                                          : 1
+GPU 00000000:02:00.0
+    GSP Firmware Version                               : 610.57.01

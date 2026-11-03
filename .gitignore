@@ -1,0 +1,9 @@
+*.local.json
+__pycache__/
+*.py[cod]
+/reports/
+/backup/
+/state/
+/staging/
+/payload/
+/.test-scratch/

@@ -1,0 +1,4 @@
+TX: BEGIN
+TU10X PLM relock: unlock_persist=true
+HANDOFF-OUT: tu10x: plm=0x13579bdf ss0=0x2468ace0 ss1=0x12 tu10x_unlock=false
+CHAIN: StartImage

@@ -4,7 +4,7 @@ Author: Onside Lab
 
 ## Objective
 
-We wanted to speed up local LLMs and image generation on an existing GPU. Before considering purchasing additional hardware, we verified on physical hardware whether compute performance could change on our current RTX 2080 Ti (TU102). As an Onside technical case study, this document records the conditions tested and the scope observed.
+We wanted to speed up local LLMs and image generation on an existing GPU. Before buying additional hardware, we tested whether compute performance could improve on our existing RTX 2080 Ti. As an Onside technical case study, this document records the conditions tested and the scope observed.
 
 ## Approach
 
@@ -36,4 +36,4 @@ Matrix multiplication performance is only one factor when evaluating existing ha
 
 Comparisons against hardware purchases must account not only for raw performance, but also for the per-boot operational overhead, recovery time during anomalies, and long-term maintainability. We present these findings as a single example where compute performance of an existing GPU was unlocked conditionally; adoption in production environments should be decided based on actual workloads and operational conditions.
 
-Execution and use are at your own risk, with no warranty. We provide no support for individual environments and do not accept questions, GitHub Issues, or pull requests.
+Execution and use are at your own risk, with no warranty. We provide no support for individual environments and do not accept support questions, GitHub Issues, or pull requests. [Discussions](https://github.com/onside-lab/rtx-2080-ti-11gb-turing-unlock-windows-kit/discussions) are open for ideas and shared results. The [Windows kit and its limits](../README.md) describe what was generalized from this run; it has not been re-tested on real hardware after generalization.

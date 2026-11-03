@@ -1,0 +1,14 @@
+{
+  "python_executable": "python.exe",
+  "reports_dir": "reports",
+  "gsp_plan": "",
+  "gpu": {
+    "uuid": "",
+    "pnp_instance_id": "",
+    "subsystem_id": "",
+    "bdf": ""
+  },
+  "media_policy": "config/media-policy.local.json",
+  "usb_policy": "config/p3-usb-policy.local.json",
+  "payload_root": ""
+}
