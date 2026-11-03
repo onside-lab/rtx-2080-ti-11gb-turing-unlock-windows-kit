@@ -77,17 +77,29 @@ Follow the [staged procedure](docs/reproduce.md) for upstream diagnostics, GSP v
 ## How it works
 
 ```mermaid
-flowchart LR
-    A[Inspect and diagnose] --> B[GSP enable if needed]
-    B --> C[Human reboot]
-    C --> D[Verify GSP and baseline]
-    D --> E[Prepare USB]
-    E --> F[Human boots once from USB]
-    F --> G[Human confirms]
-    G --> H[Windows]
-    H --> I[Collect evidence]
-    I --> J[Benchmark]
-    J --> K[Restore]
+flowchart TD
+    subgraph S1["1. Prepare in Windows"]
+        A[Inspect and diagnose] --> B[GSP enable if needed]
+        B --> C[Human reboot]
+        C --> D[Verify GSP and baseline]
+        D --> E[Prepare USB]
+    end
+
+    subgraph S2["2. One boot from USB"]
+        F[Human boots once from USB] --> G[Human confirms]
+    end
+
+    subgraph S3["3. Back in Windows"]
+        H[Windows] --> I[Collect evidence]
+        I --> J[Benchmark]
+        J --> K[Restore]
+    end
+
+    E --> F
+    G --> H
+
+    classDef human stroke:#d97706,stroke-width:2px,stroke-dasharray: 5 5
+    class C,F,G human
 ```
 
 Diagnostic EFI and unlock EFI are separate stages. GSP configuration persists independently of the volatile unlock. If GSP is already enabled, skip the registry change and verify its actual operation.
